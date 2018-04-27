@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f6c0dbc3-1a99-498d-9156-7a9dd631a779" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="92b6ec48-7006-40db-9121-02117295afcd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="578de321-1bbf-48e0-8d34-ffec58405e95" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a36ec7e8-57be-42c1-8354-151b350f70e8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="bd1ebee4-deb4-4a6a-8670-fad67479cc29" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webforumdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="acc_ID" />
+    </Key>
+    <Property Name="acc_ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="45" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" />
+    <Property Name="dateOfBirth" Type="datetime" Precision="0" />
+    <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="emailAdd" Type="varchar" MaxLength="45" />
+    <Property Name="profile_picture" Type="varchar" MaxLength="45" />
+    <Property Name="bio" Type="longtext" />
+  </EntityType>
+  <EntityType Name="activitylog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" />
+    <Property Name="Description" Type="longtext" Nullable="false" />
+    <Property Name="Account_ID" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="uint" Nullable="false" />
+    <Property Name="Comment_Text" Type="longtext" Nullable="false" />
+    <Property Name="Timestamp" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Movie_ID" Type="uint" Nullable="false" />
+    <Property Name="Movie_Rate" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="movie">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plot" Type="longtext" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="year" Type="uint" Nullable="false" />
+    <Property Name="poster" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="rating" Type="uint" />
+    <Property Name="preview" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="movie_category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_ID" Type="uint" Nullable="false" />
+    <Property Name="Movie_ID" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="webforumdbModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="webforumdb" store:Type="Tables" />
+    <EntitySet Name="activitylog" EntityType="Self.activitylog" Schema="webforumdb" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="webforumdb" store:Type="Tables" />
+    <EntitySet Name="comment" EntityType="Self.comment" Schema="webforumdb" store:Type="Tables" />
+    <EntitySet Name="movie" EntityType="Self.movie" Schema="webforumdb" store:Type="Tables" />
+    <EntitySet Name="movie_category" EntityType="Self.movie_category" Schema="webforumdb" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

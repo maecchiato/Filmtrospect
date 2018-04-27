@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="75fc75823c8c41619c18c031cdbd4d53" Name="Diagram1">
+        <EntityTypeShape EntityType="webforumdbModel.category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="webforumdbModel.movie_category" Width="1.5" PointX="2.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="webforumdbModel.activitylog" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="webforumdbModel.comment" Width="1.5" PointX="4.5" PointY="0.5" />
+        <EntityTypeShape EntityType="webforumdbModel.movie" Width="1.5" PointX="0.5" PointY="6.625" />
+        <EntityTypeShape EntityType="webforumdbModel.account" Width="1.5" PointX="5.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="webforumdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="acc_ID" />
+          </Key>
+          <Property Name="acc_ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="varchar" MaxLength="45" />
+          <Property Name="lastName" Type="varchar" MaxLength="45" />
+          <Property Name="dateOfBirth" Type="datetime" Precision="0" />
+          <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="emailAdd" Type="varchar" MaxLength="45" />
+          <Property Name="profile_picture" Type="varchar" MaxLength="45" />
+          <Property Name="bio" Type="longtext" />
+        </EntityType>
+        <EntityType Name="activitylog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" Nullable="false" />
+          <Property Name="Description" Type="longtext" Nullable="false" />
+          <Property Name="Account_ID" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="uint" Nullable="false" />
+          <Property Name="Comment_Text" Type="longtext" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="Movie_ID" Type="uint" Nullable="false" />
+          <Property Name="Movie_Rate" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="movie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="plot" Type="longtext" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="year" Type="uint" Nullable="false" />
+          <Property Name="poster" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="rating" Type="uint" />
+          <Property Name="preview" Type="longtext" Nullable="false" />
+        </EntityType>
+        <EntityType Name="movie_category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category_ID" Type="uint" Nullable="false" />
+          <Property Name="Movie_ID" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="webforumdbModelStoreContainer">
+          <EntitySet Name="account" EntityType="Self.account" Schema="webforumdb" store:Type="Tables" />
+          <EntitySet Name="activitylog" EntityType="Self.activitylog" Schema="webforumdb" store:Type="Tables" />
+          <EntitySet Name="category" EntityType="Self.category" Schema="webforumdb" store:Type="Tables" />
+          <EntitySet Name="comment" EntityType="Self.comment" Schema="webforumdb" store:Type="Tables" />
+          <EntitySet Name="movie" EntityType="Self.movie" Schema="webforumdb" store:Type="Tables" />
+          <EntitySet Name="movie_category" EntityType="Self.movie_category" Schema="webforumdb" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="webforumdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="movie_category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_ID" Type="Int64" Nullable="false" />
+          <Property Name="Movie_ID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="webforumdbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categories" EntityType="Self.category" />
+          <EntitySet Name="movie_category" EntityType="Self.movie_category" />
+          <EntitySet Name="activitylogs" EntityType="webforumdbModel.activitylog" />
+          <EntitySet Name="comments" EntityType="webforumdbModel.comment" />
+          <EntitySet Name="movies" EntityType="webforumdbModel.movie" />
+          <EntitySet Name="accounts" EntityType="webforumdbModel.account" />
+        </EntityContainer>
+        <EntityType Name="activitylog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="Account_ID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int64" Nullable="false" />
+          <Property Name="Comment_Text" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="Timestamp" Type="DateTime" Nullable="false" />
+          <Property Name="Movie_ID" Type="Int64" Nullable="false" />
+          <Property Name="Movie_Rate" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="movie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="plot" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="Int64" Nullable="false" />
+          <Property Name="poster" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="rating" Type="Int64" />
+          <Property Name="preview" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="acc_ID" />
+          </Key>
+          <Property Name="acc_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="lastName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="dateOfBirth" Type="DateTime" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="emailAdd" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="profile_picture" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="bio" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="webforumdbModelStoreContainer" CdmEntityContainer="webforumdbEntities1">
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="webforumdbModel.category">
+              <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="movie_category">
+            <EntityTypeMapping TypeName="webforumdbModel.movie_category">
+              <MappingFragment StoreEntitySet="movie_category">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Movie_ID" ColumnName="Movie_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="activitylogs">
+            <EntityTypeMapping TypeName="webforumdbModel.activitylog">
+              <MappingFragment StoreEntitySet="activitylog">
+                <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comments">
+            <EntityTypeMapping TypeName="webforumdbModel.comment">
+              <MappingFragment StoreEntitySet="comment">
+                <ScalarProperty Name="Movie_Rate" ColumnName="Movie_Rate" />
+                <ScalarProperty Name="Movie_ID" ColumnName="Movie_ID" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Comment_Text" ColumnName="Comment_Text" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="movies">
+            <EntityTypeMapping TypeName="webforumdbModel.movie">
+              <MappingFragment StoreEntitySet="movie">
+                <ScalarProperty Name="preview" ColumnName="preview" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="poster" ColumnName="poster" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="plot" ColumnName="plot" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="accounts">
+            <EntityTypeMapping TypeName="webforumdbModel.account">
+              <MappingFragment StoreEntitySet="account">
+                <ScalarProperty Name="bio" ColumnName="bio" />
+                <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+                <ScalarProperty Name="emailAdd" ColumnName="emailAdd" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="acc_ID" ColumnName="acc_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

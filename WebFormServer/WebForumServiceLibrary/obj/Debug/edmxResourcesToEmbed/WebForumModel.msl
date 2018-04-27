@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="webforumdbModelStoreContainer" CdmEntityContainer="webforumdbEntities1">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="webforumdbModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="movie_category">
+      <EntityTypeMapping TypeName="webforumdbModel.movie_category">
+        <MappingFragment StoreEntitySet="movie_category">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Movie_ID" ColumnName="Movie_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="activitylogs">
+      <EntityTypeMapping TypeName="webforumdbModel.activitylog">
+        <MappingFragment StoreEntitySet="activitylog">
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comments">
+      <EntityTypeMapping TypeName="webforumdbModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="Movie_Rate" ColumnName="Movie_Rate" />
+          <ScalarProperty Name="Movie_ID" ColumnName="Movie_ID" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="Comment_Text" ColumnName="Comment_Text" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="movies">
+      <EntityTypeMapping TypeName="webforumdbModel.movie">
+        <MappingFragment StoreEntitySet="movie">
+          <ScalarProperty Name="preview" ColumnName="preview" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="poster" ColumnName="poster" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="plot" ColumnName="plot" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="webforumdbModel.account">
+        <MappingFragment StoreEntitySet="account">
+          <ScalarProperty Name="bio" ColumnName="bio" />
+          <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+          <ScalarProperty Name="emailAdd" ColumnName="emailAdd" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="acc_ID" ColumnName="acc_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

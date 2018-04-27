@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3497CD8C-C34F-47D8-8CD4-7BC6EECD7EC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForumInterface</RootNamespace>
+    <AssemblyName>ForumInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="forum_img\profile_pic\jam.JPG" />
+    <Content Include="forum_img\movie_pic\Avatar.jpg" />
+    <Content Include="forum_img\movie_pic\Brave.jpg" />
+    <Content Include="forum_img\movie_pic\Comet.jpg" />
+    <Content Include="forum_img\movie_pic\EdgeofTomorrow.jpg" />
+    <Content Include="forum_img\movie_pic\Frozen.jpg" />
+    <Content Include="forum_img\movie_pic\Insidious.jpg" />
+    <Content Include="forum_img\movie_pic\It.jpg" />
+    <Content Include="forum_img\movie_pic\TheConjuring.jpg" />
+    <Content Include="forum_img\movie_pic\TheSinister.jpg" />
+    <Content Include="forum_img\movie_pic\YourName.jpg" />
+    <Content Include="forum_img\profile_pic\jamm.jpg" />
+    <Content Include="forum_img\profile_pic\joa.JPG" />
+    <Content Include="forum_img\movie_pic\10ThingsIHateAboutYou.jpg" />
+    <Content Include="forum_img\movie_pic\Neighbors.jpg" />
+    <Content Include="forum_img\movie_pic\WonderWoman.jpg" />
+    <Content Include="forum_img\profile_pic\avatar.png" />
+    <Content Include="forum_img\profile_pic\pretty.JPG" />
+    <Content Include="forum_img\profile_pic\saya.JPG" />
+    <Content Include="images\camfilm.jpg" />
+    <Content Include="images\film.jpg" />
+    <Content Include="images\filmfinal.jpg" />
+    <Content Include="images\FINALfilm.jpg" />
+    <Content Include="images\maxresdefault.jpg" />
+    <Content Include="images\pretty.JPG" />
+    <Content Include="images\Product-Photography.png" />
+    <Content Include="Movies.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="css\style.css.map" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="images\.DS_Store" />
+    <Content Include="Profile.aspx" />
+    <Content Include="scripts\.DS_Store" />
+    <Content Include="sass\.DS_Store" />
+    <Content Include="sass\bootstrap.scss" />
+    <Content Include="sass\style.scss" />
+    <Content Include="sass\_bootstrap-compass.scss" />
+    <Content Include="sass\_bootstrap-mincer.scss" />
+    <Content Include="sass\_bootstrap-sprockets.scss" />
+    <Content Include="sass\bootstrap\mixins\_alerts.scss" />
+    <Content Include="sass\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="sass\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="sass\bootstrap\mixins\_buttons.scss" />
+    <Content Include="sass\bootstrap\mixins\_center-block.scss" />
+    <Content Include="sass\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="sass\bootstrap\mixins\_forms.scss" />
+    <Content Include="sass\bootstrap\mixins\_gradients.scss" />
+    <Content Include="sass\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="sass\bootstrap\mixins\_grid.scss" />
+    <Content Include="sass\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="sass\bootstrap\mixins\_image.scss" />
+    <Content Include="sass\bootstrap\mixins\_labels.scss" />
+    <Content Include="sass\bootstrap\mixins\_list-group.scss" />
+    <Content Include="sass\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="sass\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="sass\bootstrap\mixins\_opacity.scss" />
+    <Content Include="sass\bootstrap\mixins\_pagination.scss" />
+    <Content Include="sass\bootstrap\mixins\_panels.scss" />
+    <Content Include="sass\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="sass\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="sass\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="sass\bootstrap\mixins\_resize.scss" />
+    <Content Include="sass\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="sass\bootstrap\mixins\_size.scss" />
+    <Content Include="sass\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="sass\bootstrap\mixins\_table-row.scss" />
+    <Content Include="sass\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="sass\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="sass\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="sass\bootstrap\_alerts.scss" />
+    <Content Include="sass\bootstrap\_badges.scss" />
+    <Content Include="sass\bootstrap\_breadcrumbs.scss" />
+    <Content Include="sass\bootstrap\_button-groups.scss" />
+    <Content Include="sass\bootstrap\_buttons.scss" />
+    <Content Include="sass\bootstrap\_carousel.scss" />
+    <Content Include="sass\bootstrap\_close.scss" />
+    <Content Include="sass\bootstrap\_code.scss" />
+    <Content Include="sass\bootstrap\_component-animations.scss" />
+    <Content Include="sass\bootstrap\_dropdowns.scss" />
+    <Content Include="sass\bootstrap\_forms.scss" />
+    <Content Include="sass\bootstrap\_glyphicons.scss" />
+    <Content Include="sass\bootstrap\_grid.scss" />
+    <Content Include="sass\bootstrap\_input-groups.scss" />
+    <Content Include="sass\bootstrap\_jumbotron.scss" />
+    <Content Include="sass\bootstrap\_labels.scss" />
+    <Content Include="sass\bootstrap\_list-group.scss" />
+    <Content Include="sass\bootstrap\_media.scss" />
+    <Content Include="sass\bootstrap\_mixins.scss" />
+    <Content Include="sass\bootstrap\_modals.scss" />
+    <Content Include="sass\bootstrap\_navbar.scss" />
+    <Content Include="sass\bootstrap\_navs.scss" />
+    <Content Include="sass\bootstrap\_normalize.scss" />
+    <Content Include="sass\bootstrap\_pager.scss" />
+    <Content Include="sass\bootstrap\_pagination.scss" />
+    <Content Include="sass\bootstrap\_panels.scss" />
+    <Content Include="sass\bootstrap\_popovers.scss" />
+    <Content Include="sass\bootstrap\_print.scss" />
+    <Content Include="sass\bootstrap\_progress-bars.scss" />
+    <Content Include="sass\bootstrap\_responsive-embed.scss" />
+    <Content Include="sass\bootstrap\_responsive-utilities.scss" />
+    <Content Include="sass\bootstrap\_scaffolding.scss" />
+    <Content Include="sass\bootstrap\_tables.scss" />
+    <Content Include="sass\bootstrap\_theme.scss" />
+    <Content Include="sass\bootstrap\_thumbnails.scss" />
+    <Content Include="sass\bootstrap\_tooltip.scss" />
+    <Content Include="sass\bootstrap\_type.scss" />
+    <Content Include="sass\bootstrap\_utilities.scss" />
+    <Content Include="sass\bootstrap\_variables.scss" />
+    <Content Include="sass\bootstrap\_wells.scss" />
+    <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="Service References\AccountReference\ForumInterface.AccountReference.activitylog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AccountReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountReference\service.wsdl" />
+    <None Include="Service References\AccountReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountReference\WebForumServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentReference\service.wsdl" />
+    <None Include="Service References\CommentReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentReference\WebForumServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ThreadReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ThreadReference\service.wsdl" />
+    <None Include="Service References\ThreadReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ThreadReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ThreadReference\WebForumServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimelineReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimelineReference\service.wsdl" />
+    <None Include="Service References\TimelineReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimelineReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap-theme.css" />
+    <Content Include="content\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-datetimepicker.min.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\form-elements.css" />
+    <Content Include="css\icomoon.css" />
+    <Content Include="css\index.html" />
+    <Content Include="css\spstyle.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\threadstyle.css" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
+    <Content Include="images\broken_noise.png" />
+    <Content Include="images\broken_noise_%402X.png" />
+    <Content Include="images\gallery_1.jpeg" />
+    <Content Include="images\gallery_2.jpeg" />
+    <Content Include="images\gallery_3.jpeg" />
+    <Content Include="images\gallery_4.jpeg" />
+    <Content Include="images\gallery_5.jpeg" />
+    <Content Include="images\gallery_6.jpeg" />
+    <Content Include="images\gallery_7.jpeg" />
+    <Content Include="images\gallery_8.jpeg" />
+    <Content Include="images\gallery_9.jpeg" />
+    <Content Include="images\hero_1.jpeg" />
+    <Content Include="images\img_1.jpeg" />
+    <Content Include="images\img_sm_1.jpeg" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\LOGO.png" />
+    <Content Include="images\ocean.jpg" />
+    <Content Include="images\person_1.jpg" />
+    <Content Include="scripts\bootstrap-datetimepicker.js" />
+    <Content Include="scripts\jquery-1.11.1.js" />
+    <Content Include="scripts\jquery-1.11.1.min.js" />
+    <Content Include="scripts\jquery.backstretch.js" />
+    <Content Include="scripts\jquery.backstretch.min.js" />
+    <Content Include="scripts\jquery.easing.1.3.js" />
+    <Content Include="scripts\jquery.flexslider-min.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\jquery.stellar.min.js" />
+    <Content Include="scripts\jquery.waypoints.min.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\modernizr-2.6.2.min.js" />
+    <Content Include="scripts\moment.min.js" />
+    <Content Include="scripts\placeholder.js" />
+    <Content Include="scripts\respond.min.js" />
+    <Content Include="scripts\retina-1.1.0.js" />
+    <Content Include="scripts\retina-1.1.0.min.js" />
+    <Content Include="scripts\scripts.js" />
+    <Content Include="scripts\zoomerang.js" />
+    <None Include="Service References\AccountReference\configuration91.svcinfo" />
+    <None Include="Service References\AccountReference\configuration.svcinfo" />
+    <None Include="Service References\AccountReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CommentReference\configuration91.svcinfo" />
+    <None Include="Service References\CommentReference\configuration.svcinfo" />
+    <None Include="Service References\CommentReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ThreadReference\configuration91.svcinfo" />
+    <None Include="Service References\ThreadReference\configuration.svcinfo" />
+    <None Include="Service References\ThreadReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TimelineReference\configuration91.svcinfo" />
+    <None Include="Service References\TimelineReference\configuration.svcinfo" />
+    <None Include="Service References\TimelineReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SplashPage.aspx" />
+    <Content Include="sass\index.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\bootstrap.min.css.map" />
+    <Content Include="content\bootstrap.css.map" />
+    <Content Include="content\bootstrap-theme.min.css.map" />
+    <Content Include="content\bootstrap-theme.css.map" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome\less\animated.less" />
+    <Content Include="fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome\less\core.less" />
+    <Content Include="fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome\less\icons.less" />
+    <Content Include="fonts\font-awesome\less\larger.less" />
+    <Content Include="fonts\font-awesome\less\list.less" />
+    <Content Include="fonts\font-awesome\less\mixins.less" />
+    <Content Include="fonts\font-awesome\less\path.less" />
+    <Content Include="fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome\less\stacked.less" />
+    <Content Include="fonts\font-awesome\less\variables.less" />
+    <Content Include="fonts\font-awesome\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome\scss\_core.scss" />
+    <Content Include="fonts\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome\scss\_list.scss" />
+    <Content Include="fonts\font-awesome\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome\scss\_path.scss" />
+    <Content Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="Thread.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Home.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movies.aspx.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movies.aspx.designer.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AccountReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommentReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ThreadReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TimelineReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SplashPage.aspx.cs">
+      <DependentUpon>SplashPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SplashPage.aspx.designer.cs">
+      <DependentUpon>SplashPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thread.aspx.cs">
+      <DependentUpon>Thread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thread.aspx.designer.cs">
+      <DependentUpon>Thread.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountReference\" />
+    <WCFMetadataStorage Include="Service References\CommentReference\" />
+    <WCFMetadataStorage Include="Service References\ThreadReference\" />
+    <WCFMetadataStorage Include="Service References\TimelineReference\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57467</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57467/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

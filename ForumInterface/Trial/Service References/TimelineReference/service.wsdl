@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TimelineService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITimelineService_getAllMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllMovies" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getAllMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getSortedMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSortedMovies" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getSortedMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSortedMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieImage" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieTitle" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieYear" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMoviePreview_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMoviePreview" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMoviePreview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMoviePreviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMoviePlot_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMoviePlot" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMoviePlot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMoviePlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieCategories" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRating" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:getComment" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getFeaturedMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedMovies" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getFeaturedMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getTrendingMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTrendingMovies" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getTrendingMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTrendingMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieComments" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getMovieComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommenter" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentRate" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentDesc" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentTime" />
+  </wsdl:message>
+  <wsdl:message name="ITimelineService_getCommentTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITimelineService">
+    <wsdl:operation name="getAllMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getAllMovies" message="tns:ITimelineService_getAllMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getAllMoviesResponse" message="tns:ITimelineService_getAllMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSortedMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getSortedMovies" message="tns:ITimelineService_getSortedMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getSortedMoviesResponse" message="tns:ITimelineService_getSortedMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMovieImage" message="tns:ITimelineService_getMovieImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMovieImageResponse" message="tns:ITimelineService_getMovieImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMovieTitle" message="tns:ITimelineService_getMovieTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMovieTitleResponse" message="tns:ITimelineService_getMovieTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMovieYear" message="tns:ITimelineService_getMovieYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMovieYearResponse" message="tns:ITimelineService_getMovieYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMoviePreview">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMoviePreview" message="tns:ITimelineService_getMoviePreview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMoviePreviewResponse" message="tns:ITimelineService_getMoviePreview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMoviePlot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMoviePlot" message="tns:ITimelineService_getMoviePlot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMoviePlotResponse" message="tns:ITimelineService_getMoviePlot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMovieCategories" message="tns:ITimelineService_getMovieCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMovieCategoriesResponse" message="tns:ITimelineService_getMovieCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getRating" message="tns:ITimelineService_getRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getRatingResponse" message="tns:ITimelineService_getRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getComment" message="tns:ITimelineService_getComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getCommentResponse" message="tns:ITimelineService_getComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getFeaturedMovies" message="tns:ITimelineService_getFeaturedMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getFeaturedMoviesResponse" message="tns:ITimelineService_getFeaturedMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTrendingMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getTrendingMovies" message="tns:ITimelineService_getTrendingMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getTrendingMoviesResponse" message="tns:ITimelineService_getTrendingMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getMovieComments" message="tns:ITimelineService_getMovieComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getMovieCommentsResponse" message="tns:ITimelineService_getMovieComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getCommenter" message="tns:ITimelineService_getCommenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getCommenterResponse" message="tns:ITimelineService_getCommenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommentRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getCommentRate" message="tns:ITimelineService_getCommentRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getCommentRateResponse" message="tns:ITimelineService_getCommentRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommentDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getCommentDesc" message="tns:ITimelineService_getCommentDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getCommentDescResponse" message="tns:ITimelineService_getCommentDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommentTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimelineService/getCommentTime" message="tns:ITimelineService_getCommentTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimelineService/getCommentTimeResponse" message="tns:ITimelineService_getCommentTime_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITimelineService" type="tns:ITimelineService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllMovies">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getAllMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSortedMovies">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getSortedMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovieImage">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMovieImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovieTitle">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMovieTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovieYear">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMovieYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMoviePreview">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMoviePreview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMoviePlot">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMoviePlot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovieCategories">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMovieCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRating">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComment">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedMovies">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getFeaturedMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrendingMovies">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getTrendingMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovieComments">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getMovieComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommenter">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getCommenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentRate">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getCommentRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentDesc">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getCommentDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentTime">
+      <soap:operation soapAction="http://tempuri.org/ITimelineService/getCommentTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TimelineService">
+    <wsdl:port name="BasicHttpBinding_ITimelineService" binding="tns:BasicHttpBinding_ITimelineService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/TimelineService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

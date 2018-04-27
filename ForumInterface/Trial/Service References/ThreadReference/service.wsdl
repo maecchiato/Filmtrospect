@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ThreadService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IThreadService_createMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:createMovie" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_createMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_insertMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertMovie" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_insertMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_assignCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:assignCategory" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_assignCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:assignCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_computeRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:computeRating" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_computeRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:computeRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_updateMovieRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMovieRate" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_updateMovieRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMovieRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByRating" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByRatingCat_InputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByRatingCat" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByRatingCat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByRatingCatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByComment" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByCommentCat_InputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByCommentCat" />
+  </wsdl:message>
+  <wsdl:message name="IThreadService_adminMovByCommentCat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adminMovByCommentCatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IThreadService">
+    <wsdl:operation name="createMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/createMovie" message="tns:IThreadService_createMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/createMovieResponse" message="tns:IThreadService_createMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/insertMovie" message="tns:IThreadService_insertMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/insertMovieResponse" message="tns:IThreadService_insertMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="assignCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/assignCategory" message="tns:IThreadService_assignCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/assignCategoryResponse" message="tns:IThreadService_assignCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="computeRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/computeRating" message="tns:IThreadService_computeRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/computeRatingResponse" message="tns:IThreadService_computeRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMovieRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/updateMovieRate" message="tns:IThreadService_updateMovieRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/updateMovieRateResponse" message="tns:IThreadService_updateMovieRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/adminMovByRating" message="tns:IThreadService_adminMovByRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/adminMovByRatingResponse" message="tns:IThreadService_adminMovByRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByRatingCat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/adminMovByRatingCat" message="tns:IThreadService_adminMovByRatingCat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/adminMovByRatingCatResponse" message="tns:IThreadService_adminMovByRatingCat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/adminMovByComment" message="tns:IThreadService_adminMovByComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/adminMovByCommentResponse" message="tns:IThreadService_adminMovByComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByCommentCat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThreadService/adminMovByCommentCat" message="tns:IThreadService_adminMovByCommentCat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThreadService/adminMovByCommentCatResponse" message="tns:IThreadService_adminMovByCommentCat_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IThreadService" type="tns:IThreadService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createMovie">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/createMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMovie">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/insertMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignCategory">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/assignCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="computeRating">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/computeRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMovieRate">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/updateMovieRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByRating">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/adminMovByRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByRatingCat">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/adminMovByRatingCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByComment">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/adminMovByComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adminMovByCommentCat">
+      <soap:operation soapAction="http://tempuri.org/IThreadService/adminMovByCommentCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ThreadService">
+    <wsdl:port name="BasicHttpBinding_IThreadService" binding="tns:BasicHttpBinding_IThreadService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/ThreadService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

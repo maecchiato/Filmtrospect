@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="createAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="uName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailAdd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createAccountResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" minOccurs="0" name="newAccount" nillable="true" type="q1:account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertAccountResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifyAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifyAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verifyAccountResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activitesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" minOccurs="0" name="activitesResult" nillable="true" type="q2:ArrayOfactivitylog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityListResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeProfilePic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeProfilePicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="changeProfilePicResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfilePicture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfilePictureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getProfilePictureResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeBio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeBioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="changeBioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getBioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUserNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDobResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

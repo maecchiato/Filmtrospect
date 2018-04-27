@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webforumdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="movie_category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_ID" Type="Int64" Nullable="false" />
+    <Property Name="Movie_ID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="webforumdbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="movie_category" EntityType="Self.movie_category" />
+    <EntitySet Name="activitylogs" EntityType="webforumdbModel.activitylog" />
+    <EntitySet Name="comments" EntityType="webforumdbModel.comment" />
+    <EntitySet Name="movies" EntityType="webforumdbModel.movie" />
+    <EntitySet Name="accounts" EntityType="webforumdbModel.account" />
+  </EntityContainer>
+  <EntityType Name="activitylog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="Account_ID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="Comment_Text" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" />
+    <Property Name="Movie_ID" Type="Int64" Nullable="false" />
+    <Property Name="Movie_Rate" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="movie">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="plot" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="year" Type="Int64" Nullable="false" />
+    <Property Name="poster" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="Int64" />
+    <Property Name="preview" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="acc_ID" />
+    </Key>
+    <Property Name="acc_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirth" Type="DateTime" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="emailAdd" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="profile_picture" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="bio" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

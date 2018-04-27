@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" />
+  <xs:element name="createComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="comment_text" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="timestamp" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="thread_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="rate" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createCommentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" minOccurs="0" name="newComment" nillable="true" type="q1:comment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertCommentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="movieID" type="xs:int" />
+        <xs:element minOccurs="0" name="time" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" minOccurs="0" name="act" nillable="true" type="q2:activitylog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertActivityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

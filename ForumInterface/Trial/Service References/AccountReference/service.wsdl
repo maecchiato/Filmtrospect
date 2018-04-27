@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccountService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WebForumServiceLibrary" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccountService_createAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:createAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_createAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_insertAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_insertAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_verifyAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:verifyAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_verifyAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verifyAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_activites_InputMessage">
+    <wsdl:part name="parameters" element="tns:activites" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_activites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:activitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_activityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:activityList" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_activityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:activityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_changeProfilePic_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeProfilePic" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_changeProfilePic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeProfilePicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getProfilePicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProfilePicture" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getProfilePicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProfilePictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_changeBio_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeBio" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_changeBio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeBioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getBio_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBio" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getBio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserName" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getName" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getDob_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDob" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getDob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEmail" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_getEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAccountService">
+    <wsdl:operation name="createAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/createAccount" message="tns:IAccountService_createAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/createAccountResponse" message="tns:IAccountService_createAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/insertAccount" message="tns:IAccountService_insertAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/insertAccountResponse" message="tns:IAccountService_insertAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/verifyAccount" message="tns:IAccountService_verifyAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/verifyAccountResponse" message="tns:IAccountService_verifyAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="activites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/activites" message="tns:IAccountService_activites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/activitesResponse" message="tns:IAccountService_activites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="activityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/activityList" message="tns:IAccountService_activityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/activityListResponse" message="tns:IAccountService_activityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeProfilePic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/changeProfilePic" message="tns:IAccountService_changeProfilePic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/changeProfilePicResponse" message="tns:IAccountService_changeProfilePic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProfilePicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getProfilePicture" message="tns:IAccountService_getProfilePicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getProfilePictureResponse" message="tns:IAccountService_getProfilePicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeBio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/changeBio" message="tns:IAccountService_changeBio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/changeBioResponse" message="tns:IAccountService_changeBio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getBio" message="tns:IAccountService_getBio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getBioResponse" message="tns:IAccountService_getBio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getUserName" message="tns:IAccountService_getUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getUserNameResponse" message="tns:IAccountService_getUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getName" message="tns:IAccountService_getName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getNameResponse" message="tns:IAccountService_getName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getDob" message="tns:IAccountService_getDob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getDobResponse" message="tns:IAccountService_getDob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/getEmail" message="tns:IAccountService_getEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/getEmailResponse" message="tns:IAccountService_getEmail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAccountService" type="tns:IAccountService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/createAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/insertAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/verifyAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activites">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/activites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activityList">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/activityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeProfilePic">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/changeProfilePic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfilePicture">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getProfilePicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeBio">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/changeBio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBio">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getBio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserName">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getName">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDob">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getDob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmail">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/getEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountService">
+    <wsdl:port name="BasicHttpBinding_IAccountService" binding="tns:BasicHttpBinding_IAccountService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebForumServiceLibrary/AccountService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
